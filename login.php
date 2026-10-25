@@ -1,71 +1,40 @@
 <?php
-require_once __DIR__ . '/_bootstrap.php';
+require_once __DIR__ . '/../config/bootstrap.php';
 
-$pdo = mf_admin_db(); // ensures admin_users exists + default admin is seeded
+mf_require_method('POST');
+$body = mf_body();
 
-if (mf_admin_current()) {
-    header('Location: index.php');
-    exit;
+$email    = trim((string) ($body['email'] ?? ''));
+$password = (string) ($body['password'] ?? '');
+
+if ($email === '' || $password === '') {
+    mf_error('Email and password are required.', 422);
 }
 
-$error = '';
-$isFirstRun = (int) $pdo->query('SELECT COUNT(*) FROM admin_users')->fetchColumn() === 1;
+try {
+    $pdo = mf_db();
+    $stmt = $pdo->prepare('SELECT id, full_name, email, password_hash FROM users WHERE email = :email');
+    $stmt->execute(['email' => $email]);
+    $user = $stmt->fetch();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim((string) ($_POST['username'] ?? ''));
-    $password = (string) ($_POST['password'] ?? '');
-
-    $stmt = $pdo->prepare('SELECT id, username, password_hash FROM admin_users WHERE username = :u');
-    $stmt->execute(['u' => $username]);
-    $row = $stmt->fetch();
-
-    if ($row && password_verify($password, $row['password_hash'])) {
-        session_regenerate_id(true);
-        $_SESSION['admin_id'] = (int) $row['id'];
-        $_SESSION['admin_username'] = $row['username'];
-        header('Location: index.php');
-        exit;
+    if (!$user || !password_verify($password, $user['password_hash'])) {
+        mf_error('Invalid email or password.', 401);
     }
-    $error = 'Incorrect username or password.';
+
+    $_SESSION['user_id'] = (int) $user['id'];
+    mf_log_activity('LOGIN', (int) $user['id'], 'Customer logged in.', $pdo);
+
+    if (!empty($body['remember'])) {
+        // Extend the session cookie lifetime for "remember me".
+        $params = session_get_cookie_params();
+        setcookie(session_name(), session_id(), time() + 60 * 60 * 24 * 30, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
+    }
+
+    mf_success([
+        'id'       => (int) $user['id'],
+        'fullName' => $user['full_name'],
+        'email'    => $user['email'],
+    ], 'Login successful.');
+} catch (Throwable $e) {
+    mf_error('Login failed: ' . $e->getMessage(), 500);
 }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Login · Marvel Fashion</title>
-<link rel="stylesheet" href="assets/admin.css">
-</head>
-<body>
-<div class="mf-login-shell">
-  <div class="mf-login-card">
-    <h1>Marvel Fashion Admin</h1>
-    <p class="sub">Sign in to manage your store.</p>
-
-    <?php if ($error): ?>
-      <div class="mf-alert error"><?= h($error) ?></div>
-    <?php endif; ?>
-
-    <?php if ($isFirstRun): ?>
-      <div class="mf-alert info">
-        First time here? Use the default login below, then change your password is recommended but not required.<br>
-        <strong>Username:</strong> admin&nbsp;&nbsp; <strong>Password:</strong> <?= h(MF_ADMIN_DEFAULT_PASSWORD) ?>
-      </div>
-    <?php endif; ?>
-
-    <form method="POST">
-      <div class="mf-field">
-        <label>Username</label>
-        <input type="text" name="username" autocomplete="username" required autofocus>
-      </div>
-      <div class="mf-field">
-        <label>Password</label>
-        <input type="password" name="password" autocomplete="current-password" required>
-      </div>
-      <button type="submit" class="mf-btn primary" style="width:100%;justify-content:center;padding:11px;">Sign In</button>
-    </form>
-  </div>
-</div>
-</body>
-</html>
