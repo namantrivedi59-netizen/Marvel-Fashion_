@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARVEL FASHION | Wear The Hero Within</title>
+<meta name="description" content="Premium Marvel-inspired clothing featuring Spider-Man, Iron Man, Thor, Captain America and Black Panther.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/shop.css">
+<link rel="stylesheet" href="css/hero-glow.css">
+<link rel="stylesheet" href="css/aurora.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/search.css">
+<script>(function(){try{var t=localStorage.getItem('mf-theme');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+<link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body data-glow="true">
+
+<div id="loader" class="loader">
+  <div class="loader-ring"></div>
+  <h1 class="loader-title">MARVEL FASHION</h1>
+  <p class="loader-sub" id="loaderStatus">Initializing...</p>
+</div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">MARVEL FASHION</a>
+  <ul class="nav-links">
+    <li><a href="#landing" class="nav-link">Home</a></li>
+    <li><a href="#heroes" class="nav-link">Heroes</a></li>
+    <li><a href="#collections" class="nav-link">Collections</a></li>
+    <li><a href="#footer" class="nav-link">Contact</a></li>
+        <li class="nav-search-item">
+      <div class="search-widget nav-search" data-search-widget>
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" class="search-input" data-search-input placeholder="Search Marvel products..." autocomplete="off" aria-label="Search Marvel products">
+          <button type="button" class="search-clear" data-search-clear aria-label="Clear search">✕</button>
+        </div>
+        <div class="search-dropdown" data-search-dropdown></div>
+      </div>
+    </li>
+<li>
+      <a href="pages/wishlist.html" class="nav-icon-link" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        <span class="nav-icon-badge" data-wishlist-count>0</span>
+      </a>
+    </li>
+    <li>
+      <a href="pages/cart.html" class="nav-icon-link" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+        <span class="nav-icon-badge" data-cart-count>0</span>
+      </a>
+    </li>
+    <li>
+  <a href="pages/orders.html" class="nav-link">My Orders</a>
+</li>
+    <li id="navAuthSlot"><!-- Login link OR "Hi, Username" + Logout, rendered by js/auth.js --></li>
+    <li>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.5 12h2.6M18.9 12h2.6M4.2 19.8 6.1 17.9M17.9 6.1l1.9-1.9"/></svg>
+      </button>
+    </li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="search-widget mobile-search" data-search-widget>
+    <div class="search-bar">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" class="search-input" data-search-input placeholder="Search Marvel products..." autocomplete="off" aria-label="Search Marvel products">
+      <button type="button" class="search-clear" data-search-clear aria-label="Clear search">✕</button>
+    </div>
+    <div class="search-dropdown" data-search-dropdown></div>
+  </div>
+  <a href="#landing" class="mobile-link">Home</a>
+  <a href="#heroes" class="mobile-link">Heroes</a>
+  <a href="#collections" class="mobile-link">Collections</a>
+  <a href="#footer" class="mobile-link">Contact</a>
+  <a href="pages/orders.html" class="mobile-link">My Orders</a>
+  <div class="nav-icon-row">
+    <a href="pages/wishlist.html" class="nav-icon-link" aria-label="Wishlist">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+      <span class="nav-icon-badge" data-wishlist-count>0</span>
+    </a>
+    <a href="pages/cart.html" class="nav-icon-link" aria-label="Cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+      <span class="nav-icon-badge" data-cart-count>0</span>
+    </a>
+  </div>
+    <button class="theme-toggle" id="themeToggleMobile" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.5 12h2.6M18.9 12h2.6M4.2 19.8 6.1 17.9M17.9 6.1l1.9-1.9"/></svg>
+      </button>
+  <div id="mobileAuthSlot"><!-- Login link OR "Hi, Username" + Logout, rendered by js/auth.js --></div>
+</div>
+
+<main>
+  <section class="landing" id="landing">
+    
+
+
+<div class="landing-bottom">
+
+    <h2 class="landing-heading">
+        WEAR THE HERO WITHIN
+    </h2>
+
+    <p class="landing-desc">
+        Welcome to the Marvel Fashion Universe.<br><br>
+        Discover premium apparel inspired by Spider-Man, Iron Man, Thor,
+        Captain America, Black Panther, Hulk, Black Widow and Hawkeye.
+    </p>
+
+    <a href="#heroes" class="btn btn-primary">
+        EXPLORE COLLECTION
+    </a>
+
+</div>
+    <canvas class="bg-canvas" id="landingCanvas"></canvas>
+    <div class="landing-glow"></div>
+
+    
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <div id="heroes"></div>
+
+  <div class="hero-divider" style="--from:#f2f0ea; --to:#e8283f;" aria-hidden="true">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-streak"></span>
+    <span class="hero-divider-dot"></span>
+  </div>
+
+  <section class="hero-section hero--weaver" data-hero="weaver">
+    <canvas class="bg-canvas" data-particles="web"></canvas>
+    <div class="hero-skyline"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <span class="hero-number">01</span>
+      <h2 class="hero-title"><a href="pages/weaver.html">Spider-Man</a></h2>
+      <p class="hero-tagline">Every Street Has A Guardian</p>
+
+      <div class="hero-buttons">
+        <a href="pages/weaver-hoodies.html" class="cat-btn">Hoodies</a>
+        <a href="pages/weaver-t-shirts.html" class="cat-btn">T-Shirts</a>
+        <a href="pages/weaver-jackets.html" class="cat-btn">Jackets</a>
+        <a href="pages/weaver-sneakers.html" class="cat-btn">Sneakers</a>
+        <a href="pages/weaver-caps.html" class="cat-btn">Caps</a>
+        <a href="pages/weaver-accessories.html" class="cat-btn">Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider" style="--from:#e8283f; --to:#4fc3ff;" aria-hidden="true">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-streak"></span>
+    <span class="hero-divider-dot"></span>
+  </div>
+
+  <section class="hero-section hero--storm" data-hero="storm">
+    <canvas class="bg-canvas" data-particles="lightning"></canvas>
+    <div class="hero-clouds"></div>
+    <div class="lightning-flash" id="lightningFlash"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <span class="hero-number">02</span>
+      <h2 class="hero-title"><a href="pages/storm.html">Thor</a></h2>
+      <p class="hero-tagline">Power Meets Style</p>
+
+      <div class="hero-buttons">
+        <a href="pages/storm-hoodies.html" class="cat-btn">Hoodies</a>
+        <a href="pages/storm-t-shirts.html" class="cat-btn">T-Shirts</a>
+        <a href="pages/storm-jackets.html" class="cat-btn">Jackets</a>
+        <a href="pages/storm-sweatshirts.html" class="cat-btn">Sweatshirts</a>
+        <a href="pages/storm-shoes.html" class="cat-btn">Shoes</a>
+        <a href="pages/storm-accessories.html" class="cat-btn">Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider" style="--from:#4fc3ff; --to:#d4af37;" aria-hidden="true">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-streak"></span>
+    <span class="hero-divider-dot"></span>
+  </div>
+  <section class="hero-section hero--forge" data-hero="forge">
+    <canvas class="bg-canvas" data-particles="circuit"></canvas>
+    <div class="hero-lab"></div>
+    <div class="hud-lines" aria-hidden="true"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <span class="hero-number">03</span>
+      <h2 class="hero-title"><a href="pages/forge.html">Iron Man</a></h2>
+      <p class="hero-tagline">Engineered For Greatness</p>
+
+      <div class="hero-buttons">
+        <a href="pages/forge-hoodies.html" class="cat-btn">Hoodies</a>
+        <a href="pages/forge-t-shirts.html" class="cat-btn">T-Shirts</a>
+        <a href="pages/forge-jackets.html" class="cat-btn">Jackets</a>
+        <a href="pages/forge-shoes.html" class="cat-btn">Shoes</a>
+        <a href="pages/forge-sweatshirts.html" class="cat-btn">Sweatshirts</a>
+        <a href="pages/forge-accessories.html" class="cat-btn">Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider" style="--from:#d4af37; --to:#2f5fa8;" aria-hidden="true">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-streak"></span>
+    <span class="hero-divider-dot"></span>
+  </div>
+  <section class="hero-section hero--sentinel" data-hero="sentinel">
+    <canvas class="bg-canvas" data-particles="ember"></canvas>
+    <div class="hero-fog"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <span class="hero-number">04</span>
+      <h2 class="hero-title"><a href="pages/sentinel.html">Captain America</a></h2>
+      <p class="hero-tagline">Stand For Something</p>
+
+      <div class="hero-buttons">
+        <a href="pages/sentinel-hoodies.html" class="cat-btn">Hoodies</a>
+        <a href="pages/sentinel-jackets.html" class="cat-btn">Jackets</a>
+        <a href="pages/sentinel-t-shirts.html" class="cat-btn">T-Shirts</a>
+        <a href="pages/sentinel-shoes.html" class="cat-btn">Shoes</a>
+        <a href="pages/sentinel-caps.html" class="cat-btn">Caps</a>
+        <a href="pages/sentinel-accessories.html" class="cat-btn">Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider" style="--from:#2f5fa8; --to:#9b4de8;" aria-hidden="true">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-streak"></span>
+    <span class="hero-divider-dot"></span>
+  </div>
+
+  <section class="hero-section hero--king" data-hero="king">
+    <canvas class="bg-canvas" data-particles="energy"></canvas>
+    <div class="hero-cityscape"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <span class="hero-number">05</span>
+      <h2 class="hero-title"><a href="pages/king.html">Black Panther</a></h2>
+      <p class="hero-tagline">Royalty Is A Way Of Moving</p>
+
+      <div class="hero-buttons">
+        <a href="pages/king-oversized-t-shirts.html" class="cat-btn">Oversized Tees</a>
+        <a href="pages/king-hoodies.html" class="cat-btn">Hoodies</a>
+        <a href="pages/king-jackets.html" class="cat-btn">Jackets</a>
+        <a href="pages/king-shoes.html" class="cat-btn">Shoes</a>
+        <a href="pages/king-accessories.html" class="cat-btn">Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider" style="--from:#9b4de8; --to:#4ade80;" aria-hidden="true">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-streak"></span>
+    <span class="hero-divider-dot"></span>
+  </div>
+
+  <section class="hero-section hero--hulk" data-hero="hulk">
+    <canvas class="bg-canvas" data-particles="gamma"></canvas>
+    <div class="hero-rumble"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <span class="hero-number">06</span>
+      <h2 class="hero-title"><a href="pages/hulk.html">Hulk</a></h2>
+      <p class="hero-tagline">Strongest There Is</p>
+
+      <div class="hero-buttons">
+        <a href="pages/hulk-hoodies.html" class="cat-btn">Hoodies</a>
+        <a href="pages/hulk-t-shirts.html" class="cat-btn">T-Shirts</a>
+        <a href="pages/hulk-jackets.html" class="cat-btn">Jackets</a>
+        <a href="pages/hulk-shoes.html" class="cat-btn">Shoes</a>
+        <a href="pages/hulk-accessories.html" class="cat-btn">Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider" style="--from:#4ade80; --to:#d62246;" aria-hidden="true">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-streak"></span>
+    <span class="hero-divider-dot"></span>
+  </div>
+
+  <section class="hero-section hero--blackwidow" data-hero="blackwidow">
+    <canvas class="bg-canvas" data-particles="shadow"></canvas>
+    <div class="hero-smoke"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <span class="hero-number">07</span>
+      <h2 class="hero-title"><a href="pages/blackwidow.html">Black Widow</a></h2>
+      <p class="hero-tagline">Every Move, Calculated</p>
+
+      <div class="hero-buttons">
+        <a href="pages/blackwidow-hoodies.html" class="cat-btn">Hoodies</a>
+        <a href="pages/blackwidow-t-shirts.html" class="cat-btn">T-Shirts</a>
+        <a href="pages/blackwidow-jackets.html" class="cat-btn">Jackets</a>
+        <a href="pages/blackwidow-shoes.html" class="cat-btn">Shoes</a>
+        <a href="pages/blackwidow-accessories.html" class="cat-btn">Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider" style="--from:#d62246; --to:#8b5cf6;" aria-hidden="true">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-streak"></span>
+    <span class="hero-divider-dot"></span>
+  </div>
+
+  <section class="hero-section hero--hawkeye" data-hero="hawkeye">
+    <canvas class="bg-canvas" data-particles="arrow"></canvas>
+    <div class="hero-scope"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <span class="hero-number">08</span>
+      <h2 class="hero-title"><a href="pages/hawkeye.html">Hawkeye</a></h2>
+      <p class="hero-tagline">Never Miss</p>
+
+      <div class="hero-buttons">
+        <a href="pages/hawkeye-hoodies.html" class="cat-btn">Hoodies</a>
+        <a href="pages/hawkeye-t-shirts.html" class="cat-btn">T-Shirts</a>
+        <a href="pages/hawkeye-jackets.html" class="cat-btn">Jackets</a>
+        <a href="pages/hawkeye-shoes.html" class="cat-btn">Shoes</a>
+        <a href="pages/hawkeye-accessories.html" class="cat-btn">Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="collections"></div>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">MARVEL FASHION</span>
+      <p class="footer-tag">Wear The Legend Within</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Heroes</h4>
+        <a href="#heroes">Spider-Man</a>
+        <a href="#heroes">Thor</a>
+        <a href="#heroes">Iron Man</a>
+        <a href="#heroes">Captain America</a>
+        <a href="#heroes">Black Panther</a>
+        <a href="#heroes">Hulk</a>
+        <a href="#heroes">Black Widow</a>
+        <a href="#heroes">Hawkeye</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-social" aria-label="Social media links">
+      <a href="#" class="social-icon" aria-label="Instagram">◎</a>
+      <a href="#" class="social-icon" aria-label="Twitter">✕</a>
+      <a href="#" class="social-icon" aria-label="TikTok">♪</a>
+    </div>
+  </div>
+  <p class="footer-copyright">© 2026 MARVEL FASHION Fashion. All rights reserved. All characters are original and fictional.</p>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/search.js"></script>
+<script src="js/script.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/api/apiClient.js"></script>
+<!-- MFPRODSVC_INJECTED: cart.js/wishlist.js/checkout.js need MarvelProductService for real (MySQL) product data -->
+<script src="js/api/productApi.js"></script>
+<script src="js/api/productService.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/cart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/three-bg.js"></script>
+<script src="js/aurora.js"></script>
+<script src="js/hero-glow.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/theme.js"></script>
+
+<div id="mfChatbot"></div>
+<script src="js/chatbot-config.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
