@@ -1,0 +1,234 @@
+
+html{ transition: background-color .45s ease; }
+body, .navbar, .auth-topbar, .shop-page, .auth-screen, .footer,
+.shop-card, .order-card, .cart-line, .invoice-card, .checkout-form-card,
+.payment-form-card, .summary-card, .address-card, .auth-card,
+.profile-card, .profile-tile, .wishlist-item, .achievement-card{
+  transition: background-color .45s ease, border-color .45s ease,
+              box-shadow .45s ease, color .45s ease;
+}
+@media (prefers-reduced-motion: reduce){
+  html, body, .navbar, .auth-topbar, .shop-page, .auth-screen, .footer,
+  .shop-card, .order-card, .cart-line, .invoice-card, .checkout-form-card,
+  .payment-form-card, .summary-card, .address-card, .auth-card,
+  .profile-card, .profile-tile, .wishlist-item, .achievement-card{
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   1. Dark Mode toggle control (navbar + auth-topbar + mobile menu)
+   ------------------------------------------------------------------ */
+.theme-toggle{
+  position: relative;
+  width: 42px; height: 42px;
+  display: inline-flex; align-items:center; justify-content:center;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.05);
+  color: var(--bone);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background .3s, border-color .3s, transform .3s var(--ease-smooth), box-shadow .3s;
+}
+.theme-toggle:hover{
+  border-color: rgba(255,255,255,0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+.theme-toggle svg{ width: 18px; height: 18px; }
+.theme-toggle .icon-sun{ display: none; }
+html[data-theme="dark"] .theme-toggle .icon-moon{ display: none; }
+html[data-theme="dark"] .theme-toggle .icon-sun{ display: block; color: #ffcf6b; }
+
+/* Sits as the last item inside .nav-links (flex, gap already set there) */
+.nav-links .theme-toggle{ margin-left: 4px; }
+
+/* auth-topbar keeps exactly two flex children (logo + this wrapper) so
+   its existing justify-content:space-between rule needs no change */
+.auth-topbar-right{
+  display: flex; align-items: center; gap: 18px;
+}
+
+/* Mobile menu variant — plain button sitting above the auth slot */
+.mobile-menu .theme-toggle{
+  align-self: center;
+  margin-top: 4px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .theme-toggle{ transition: none; }
+}
+
+
+body{ background-color:#08080a; }
+
+body::before{
+  content:'';
+  position: fixed; inset:0; z-index:-1;
+  pointer-events:none;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0,0,0,0.04), transparent 60%),
+              rgba(5,5,7,0.30);
+}
+
+.hero-title, .product-hero-title, .landing-title, .auth-card-heading,
+.loader-title, .shop-title, .success-title{
+  text-shadow: 0 2px 16px rgba(0,0,0,0.6), 0 0 40px currentColor, 0 0 80px rgba(0,0,0,0.3);
+}
+
+.hero--sentinel .hero-title{ color: #ff6470; }
+.hero--blackwidow .hero-title{ color: #ff5f82; }
+
+/* Secondary copy sitting on photographic/aurora backgrounds */
+.landing-desc, .hero-tagline, .product-hero-sub, .shop-subtitle,
+.auth-card-sub, .profile-section-sub, .auth-visual-sub{
+  text-shadow: 0 1px 10px rgba(0,0,0,0.55);
+}
+
+/* Outline / ghost buttons could vanish against a bright aurora patch */
+.btn, .cat-btn, .btn-ghost-sm, .size-btn, .qty-btn{
+  background-color: rgba(8,8,11,0.4);
+}
+.btn{ border-color: rgba(255,255,255,0.3); }
+.cat-btn{ border-color: rgba(255,255,255,0.26); }
+
+.shop-card, .order-card, .cart-line, .invoice-card,
+.checkout-form-card, .payment-form-card, .summary-card, .address-card{
+  background: rgba(16,16,20,0.66);
+  border-color: rgba(255,255,255,0.11);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.045);
+}
+.auth-card{
+  background: rgba(16,16,20,0.62);
+}
+.profile-card, .profile-tile, .wishlist-item, .achievement-card{
+  background: rgba(18,18,22,0.62);
+  border-color: rgba(255,255,255,0.13);
+}
+.address-form, .checkout-form-card .address-book-section .address-card{
+  background: rgba(255,255,255,0.03);
+}
+.address-card.selected{
+  background: rgba(232,40,63,0.10);
+}
+.wishlist-empty, .history-empty, .shop-empty, .checkout-empty{
+  background: rgba(14,14,18,0.4);
+  border-radius: 14px;
+}
+
+/* =========================================================================
+   5. TYPOGRAPHY POLISH — weight / spacing / hierarchy only, same fonts
+   ========================================================================= */
+.shop-eyebrow, .auth-card-eyebrow, .auth-visual-eyebrow, .eyebrow,
+.hero-number, .profile-tile-label{
+  font-weight: 700;
+}
+.shop-subtitle, .product-hero-sub, .auth-card-sub, .profile-section-sub{
+  line-height: 1.65;
+}
+.order-card-id, .invoice-brand, .summary-title, .checkout-form-card h2,
+.payment-form-card h2, .profile-section-title{
+  letter-spacing: 0.045em;
+}
+.input-group label{ font-weight: 700; }
+.field-error{ font-weight: 600; }
+.order-status-badge, .stock-badge, .price-discount-badge,
+.address-default-tag{ font-weight: 800; }
+.checkout-item-name, .cart-line-name, .shop-card-name{ font-weight: 600; }
+
+/* =========================================================================
+   6. ACCESSIBILITY
+   ========================================================================= */
+.input-shell input::placeholder{ color:#74757e; }
+
+.stock-badge--in-stock{ color:#8ef0b3; }
+.stock-badge--low-stock{ color:#ffd989; }
+.stock-badge--out-of-stock{ color:#ffa8a8; }
+.order-status-1{ color:#e8ca5c; }
+.order-status-2{ color:#74d2ff; }
+.order-status-3{ color:#cba6f7; }
+.order-status-4{ color:#7be9a9; }
+
+.auth-link, .footer-col a, .auth-switch a{ text-decoration-thickness: 1.5px; }
+
+button:focus-visible, a:focus-visible, input:focus-visible, .mf-toggle:focus-visible,
+.theme-toggle:focus-visible{
+  box-shadow: 0 0 0 4px rgba(242,240,234,0.26);
+}
+
+html[data-theme="dark"] body{ background-color:#020203; }
+html[data-theme="dark"] body::before{
+  background: radial-gradient(ellipse at 50% 0%, rgba(0,0,0,0.08), transparent 60%),
+              rgba(2,2,4,0.5);
+}
+
+html[data-theme="dark"] .navbar{ background: rgba(3,3,5,0.5); }
+html[data-theme="dark"] .navbar.scrolled{ background: rgba(3,3,5,0.88); }
+html[data-theme="dark"] .footer{ background:#050506; }
+html[data-theme="dark"] .mobile-menu{ background: rgba(2,2,3,0.99); }
+
+html[data-theme="dark"] .shop-card, html[data-theme="dark"] .order-card,
+html[data-theme="dark"] .cart-line, html[data-theme="dark"] .invoice-card,
+html[data-theme="dark"] .checkout-form-card, html[data-theme="dark"] .payment-form-card,
+html[data-theme="dark"] .summary-card, html[data-theme="dark"] .address-card,
+html[data-theme="dark"] .auth-card, html[data-theme="dark"] .profile-card,
+html[data-theme="dark"] .profile-tile, html[data-theme="dark"] .wishlist-item,
+html[data-theme="dark"] .achievement-card{
+  background: rgba(6,6,8,0.82);
+  border-color: rgba(255,255,255,0.15);
+  box-shadow: 0 26px 65px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.055);
+}
+
+html[data-theme="dark"] .mf-aurora-blob{ opacity: 0.34; }
+html[data-theme="dark"] .mf-glow-blob{ opacity: 0.2; }
+html[data-theme="dark"] .mf-grain, html[data-theme="dark"] .mf-glow-grain{ opacity: 0.06; }
+
+html[data-theme="dark"] .bone-invert{ color:#050506; }
+
+.product-card--skeleton{
+  pointer-events: none;
+}
+.product-card--skeleton .product-media{
+  background: linear-gradient(160deg, #161616, #0d0d0d);
+  position: relative;
+  overflow: hidden;
+}
+.product-card--skeleton .product-media::after,
+.skeleton-line::after{
+  content:'';
+  position:absolute; inset:0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  transform: translateX(-100%);
+  animation: mfSkeletonShimmer 1.6s ease-in-out infinite;
+}
+.skeleton-line{
+  position: relative;
+  overflow: hidden;
+  height: 14px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  margin: 10px 0;
+}
+.skeleton-line--title{ width: 70%; height: 18px; }
+.skeleton-line--sub{ width: 45%; }
+.skeleton-line--price{ width: 35%; }
+.skeleton-line--wide{ width: 100%; height: 40px; margin-top: 18px; }
+@keyframes mfSkeletonShimmer{
+  100%{ transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce){
+  .product-card--skeleton .product-media::after, .skeleton-line::after{ animation: none; }
+}
+
+.product-grid-error{
+  grid-column: 1 / -1;
+  max-width: 480px;
+  margin: 40px auto;
+  text-align: center;
+  color: var(--steel);
+  background: rgba(16,16,20,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 34px 26px;
+}
+.product-grid-error p{ margin: 0 0 18px; }

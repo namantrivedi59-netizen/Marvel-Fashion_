@@ -1,0 +1,130 @@
+
+
+.mf-glow-layer{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.mf-glow-blob{
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.32;
+  mix-blend-mode: screen;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: mfGlowFloat 30s ease-in-out infinite;
+}
+
+.mf-glow-blob--crimson{
+  width: 42vw; height: 42vw; max-width: 620px; max-height: 620px;
+  top: -8%; left: 4%;
+  background: radial-gradient(circle, rgba(232,40,63,0.6), transparent 70%);
+  animation-duration: 34s;
+}
+.mf-glow-blob--purple{
+  width: 36vw; height: 36vw; max-width: 540px; max-height: 540px;
+  top: 22%; right: -6%;
+  background: radial-gradient(circle, rgba(155,77,232,0.5), transparent 70%);
+  animation-duration: 38s;
+  animation-delay: -8s;
+}
+.mf-glow-blob--blue{
+  width: 38vw; height: 38vw; max-width: 560px; max-height: 560px;
+  top: 50%; left: -8%;
+  background: radial-gradient(circle, rgba(28,92,255,0.46), transparent 70%);
+  animation-duration: 36s;
+  animation-delay: -16s;
+}
+.mf-glow-blob--cyan{
+  width: 30vw; height: 30vw; max-width: 460px; max-height: 460px;
+  top: 74%; right: 8%;
+  background: radial-gradient(circle, rgba(79,195,255,0.4), transparent 70%);
+  animation-duration: 32s;
+  animation-delay: -4s;
+}
+.mf-glow-blob--emerald{
+  width: 26vw; height: 26vw; max-width: 400px; max-height: 400px;
+  top: 92%; left: 40%;
+  background: radial-gradient(circle, rgba(52,211,153,0.34), transparent 70%);
+  animation-duration: 40s;
+  animation-delay: -22s;
+}
+
+@keyframes mfGlowFloat{
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  25%  { transform: translate3d(2.5%, -3%, 0) scale(1.04); }
+  50%  { transform: translate3d(-2%, 2.5%, 0) scale(0.97); }
+  75%  { transform: translate3d(-3%, -1.5%, 0) scale(1.02); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.mf-glow-parallax{
+  position: absolute;
+  inset: -6%;
+  transform: translate3d(var(--mf-glow-x, 0px), var(--mf-glow-y, 0px), 0);
+  will-change: transform;
+}
+
+.mf-glow-grain{
+  position: fixed;
+  inset: -50px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+  will-change: transform;
+}
+
+.mf-glow-cursor{
+  position: fixed;
+  top: 0; left: 0;
+  width: 420px; height: 420px;
+  margin-left: -210px; margin-top: -210px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.045), transparent 65%);
+  z-index: 2;
+  pointer-events: none;
+  will-change: transform;
+  transform: translate3d(-999px, -999px, 0);
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.mf-glow-cursor.is-visible{ opacity: 1; }
+
+.mf-light-streak{
+  position: fixed;
+  top: -20%;
+  left: -30%;
+  width: 22%;
+  height: 160%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.05) 48%, rgba(255,255,255,0.09) 50%, rgba(255,255,255,0.05) 52%, transparent 60%);
+  transform: translate3d(0, 0, 0) rotate(8deg);
+  will-change: transform;
+  animation: mfStreakSweep 16s ease-in-out infinite;
+}
+@keyframes mfStreakSweep{
+  0%, 82%{ transform: translate3d(-10vw, 0, 0) rotate(8deg); opacity: 0; }
+  88%{ opacity: 1; }
+  100%{ transform: translate3d(140vw, 0, 0) rotate(8deg); opacity: 0; }
+}
+
+@media (max-width: 760px){
+  .mf-glow-blob--cyan, .mf-glow-blob--emerald{ display: none; }
+  .mf-glow-blob{ filter: blur(60px); opacity: 0.22; animation-duration: 44s; }
+  .mf-light-streak{ display: none; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .mf-glow-blob{ animation: none; }
+  .mf-glow-parallax{ transform: none !important; }
+  .mf-glow-cursor{ display: none; }
+  .mf-light-streak{ display: none; }
+}

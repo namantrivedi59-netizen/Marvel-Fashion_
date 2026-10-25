@@ -1,0 +1,48 @@
+/* ============================================================
+   LIQUID INK BACKGROUND — canvas layer only.
+   Positioning/z-index/pointer-events live here; the actual motion
+   is entirely GPU-driven (WebGL shader) inside js/liquid-bg.js.
+   z-index matches the level the old aurora CSS-blob layer used to
+   sit at, so it stays correctly behind real content — the fix in
+   aurora.css that raises .product-hero/.product-grid/.shop-page/
+   .auth-screen/.profile-shell/.footer to z-index:3 already covers
+   this layer too.
+   ============================================================ */
+.mf-liquid-canvas{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+}
+
+.mf-liquid-vignette{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(5,5,9,0.35) 100%);
+}
+
+@media (max-width: 760px){
+  .mf-liquid-vignette{
+    background: radial-gradient(ellipse at center, transparent 45%, rgba(5,5,9,0.45) 100%);
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Reveal the canvas behind it: .shop-page and .product-hero each paint
+   their own solid backdrop color (var(--void) / inline #0a0a0d), which
+   sits above the fixed liquid canvas (z-index 1) in normal stacking
+   order and hides it completely, regardless of the canvas actually
+   running. Neither element's own color is otherwise used for anything
+   but backdrop, so making it transparent on liquid-enabled pages loses
+   nothing — .shop-page::before's radial tint and .product-hero's inline
+   accent radial-gradient layer still show, now with the liquid moving
+   behind them instead of a flat color. Product cards, images, and text
+   are untouched — they live in child elements with their own explicit
+   backgrounds (declared elsewhere) and are unaffected by this rule. */
+body[data-aurora="true"] .shop-page,
+body[data-aurora="true"] .product-hero{
+  background-color: transparent !important;
+}
