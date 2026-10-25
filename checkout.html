@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | MARVEL FASHION</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/shop.css">
+<link rel="stylesheet" href="../css/aurora.css">
+<link rel="stylesheet" href="../css/liquid-bg.css">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/search.css">
+<script>(function(){try{var t=localStorage.getItem('mf-theme');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+<link rel="stylesheet" href="../css/chatbot.css">
+</head>
+<body data-root="../" data-aurora="true" data-requires-auth>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">MARVEL FASHION</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#landing" class="nav-link">Home</a></li>
+    <li><a href="cart.html" class="nav-link">Back To Cart</a></li>
+        <li class="nav-search-item">
+      <div class="search-widget nav-search" data-search-widget>
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" class="search-input" data-search-input placeholder="Search Marvel products..." autocomplete="off" aria-label="Search Marvel products">
+          <button type="button" class="search-clear" data-search-clear aria-label="Clear search">✕</button>
+        </div>
+        <div class="search-dropdown" data-search-dropdown></div>
+      </div>
+    </li>
+<li id="navAuthSlot"><!-- Login link OR "Hi, Username" + Logout, rendered by js/auth.js --></li>
+    <li>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.5 12h2.6M18.9 12h2.6M4.2 19.8 6.1 17.9M17.9 6.1l1.9-1.9"/></svg>
+      </button>
+    </li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="search-widget mobile-search" data-search-widget>
+    <div class="search-bar">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" class="search-input" data-search-input placeholder="Search Marvel products..." autocomplete="off" aria-label="Search Marvel products">
+      <button type="button" class="search-clear" data-search-clear aria-label="Clear search">✕</button>
+    </div>
+    <div class="search-dropdown" data-search-dropdown></div>
+  </div>
+  <a href="../index.html#landing" class="mobile-link">Home</a>
+  <a href="cart.html" class="mobile-link">Back To Cart</a>
+    <button class="theme-toggle" id="themeToggleMobile" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.5 12h2.6M18.9 12h2.6M4.2 19.8 6.1 17.9M17.9 6.1l1.9-1.9"/></svg>
+      </button>
+  <div id="mobileAuthSlot"><!-- Login link OR "Hi, Username" + Logout, rendered by js/auth.js --></div>
+</div>
+
+<main class="shop-page">
+  <div class="shop-header">
+    <p class="shop-eyebrow">Step 1 of 3</p>
+    <h1 class="shop-title">Checkout</h1>
+    <p class="shop-subtitle">Tell us where your gear should land.</p>
+  </div>
+
+  <div class="checkout-layout">
+    <div class="checkout-form-card">
+      <h2>Contact &amp; Shipping</h2>
+
+      <div class="input-group">
+        <label for="checkout_email">Email</label>
+        <div class="input-shell"><input type="email" id="checkout_email" placeholder="you@example.com" autocomplete="email"></div>
+        <span class="field-error" id="checkout_emailError"></span>
+      </div>
+
+      <div class="address-book-section">
+        <div class="address-book-header">
+          <h3>Saved Addresses</h3>
+          <button type="button" class="btn-ghost-sm" id="addNewAddressBtn" style="flex:none;">+ Add New Address</button>
+        </div>
+        <div class="address-list" id="addressList"><!-- rendered by js/checkout.js --></div>
+        <p class="address-empty-note" id="addressEmptyNote" hidden>No saved addresses yet — add one below.</p>
+      </div>
+
+      <form id="addressForm" class="address-form" novalidate hidden>
+        <input type="hidden" id="addressForm_editId" value="">
+        <div class="input-group">
+          <label for="checkout_fullName">Full Name</label>
+          <div class="input-shell"><input type="text" id="checkout_fullName" placeholder="Your full name" autocomplete="name"></div>
+          <span class="field-error" id="checkout_fullNameError"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="checkout_phone">Phone Number</label>
+          <div class="input-shell"><input type="tel" id="checkout_phone" placeholder="+1 555 123 4567" autocomplete="tel"></div>
+          <span class="field-error" id="checkout_phoneError"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="checkout_address">Address</label>
+          <div class="input-shell"><input type="text" id="checkout_address" placeholder="Street address" autocomplete="street-address"></div>
+          <span class="field-error" id="checkout_addressError"></span>
+        </div>
+
+        <div class="checkout-grid-2">
+          <div class="input-group">
+            <label for="checkout_city">City</label>
+            <div class="input-shell"><input type="text" id="checkout_city" placeholder="City" autocomplete="address-level2"></div>
+            <span class="field-error" id="checkout_cityError"></span>
+          </div>
+          <div class="input-group">
+            <label for="checkout_state">State</label>
+            <div class="input-shell"><input type="text" id="checkout_state" placeholder="State" autocomplete="address-level1"></div>
+            <span class="field-error" id="checkout_stateError"></span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="checkout_zip">ZIP Code</label>
+          <div class="input-shell"><input type="text" id="checkout_zip" placeholder="ZIP / Postal code" autocomplete="postal-code"></div>
+          <span class="field-error" id="checkout_zipError"></span>
+        </div>
+
+        <div class="address-form-actions">
+          <button type="submit" class="btn-solid-sm" id="saveAddressBtn" style="flex:none; padding: 10px 22px;">Save Address</button>
+          <button type="button" class="btn-ghost-sm" id="cancelAddressBtn" style="flex:none; padding: 10px 22px;">Cancel</button>
+        </div>
+      </form>
+
+      <span class="field-error" id="checkout_selectionError"></span>
+      <button type="button" class="auth-submit" id="checkoutSubmit" style="margin-top: 22px;">Continue To Order Review</button>
+    </div>
+
+    <aside class="summary-card">
+      <h2 class="summary-title">Order Summary</h2>
+      <div id="checkoutItems"></div>
+      <div id="checkoutTotals" style="margin-top: 18px;">
+        <div class="summary-row"><span>Subtotal</span><span data-subtotal>$0.00</span></div>
+        <div class="summary-row summary-discount"><span>Discount</span><span data-discount>-$0.00</span></div>
+        <div class="summary-row"><span>Shipping</span><span data-shipping>Free</span></div>
+        <div class="summary-row"><span>Tax</span><span data-tax>$0.00</span></div>
+        <div class="summary-row summary-total"><span>Total</span><span data-total>$0.00</span></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<script src="../js/products.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/api/apiClient.js"></script>
+<!-- MFPRODSVC_INJECTED: checkout/payment need MarvelProductService for buy-now product data -->
+<script src="../js/api/productApi.js"></script>
+<script src="../js/api/productService.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/addresses.js"></script>
+<script src="../js/checkout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../js/three-bg.js"></script>
+<script src="../js/aurora.js"></script>
+<script src="../js/liquid-bg.js"></script>
+<script src="../js/fx.js"></script>
+<script src="../js/theme.js"></script>
+
+<!-- MARVEL FASHION AI Chat Assistant (added by js/chatbot.js) -->
+<div id="mfChatbot"></div>
+<script src="../js/chatbot-config.js"></script>
+<script src="../js/chatbot.js"></script>
+</body>
+</html>

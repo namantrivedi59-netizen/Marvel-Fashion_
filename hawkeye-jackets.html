@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hawkeye — Jackets | MARVEL FASHION</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/shop.css">
+<link rel="stylesheet" href="../css/aurora.css">
+<link rel="stylesheet" href="../css/liquid-bg.css">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/search.css">
+<script>(function(){try{var t=localStorage.getItem('mf-theme');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+<link rel="stylesheet" href="../css/chatbot.css">
+</head>
+<body data-root="../" data-aurora="true">
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">MARVEL FASHION</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#landing" class="nav-link">Home</a></li>
+    <li><a href="../index.html#heroes" class="nav-link">Heroes</a></li>
+    <li><a href="../index.html#collections" class="nav-link">Collections</a></li>
+    <li><a href="../index.html#footer" class="nav-link">Contact</a></li>
+        <li class="nav-search-item">
+      <div class="search-widget nav-search" data-search-widget>
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" class="search-input" data-search-input placeholder="Search Marvel products..." autocomplete="off" aria-label="Search Marvel products">
+          <button type="button" class="search-clear" data-search-clear aria-label="Clear search">✕</button>
+        </div>
+        <div class="search-dropdown" data-search-dropdown></div>
+      </div>
+    </li>
+<li>
+      <a href="wishlist.html" class="nav-icon-link" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        <span class="nav-icon-badge" data-wishlist-count>0</span>
+      </a>
+    </li>
+    <li>
+      <a href="cart.html" class="nav-icon-link" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+        <span class="nav-icon-badge" data-cart-count>0</span>
+      </a>
+    </li>
+    <li id="navAuthSlot"><!-- Login link OR "Hi, Username" + Logout, rendered by js/auth.js --></li>
+    <li>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.5 12h2.6M18.9 12h2.6M4.2 19.8 6.1 17.9M17.9 6.1l1.9-1.9"/></svg>
+      </button>
+    </li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="search-widget mobile-search" data-search-widget>
+    <div class="search-bar">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" class="search-input" data-search-input placeholder="Search Marvel products..." autocomplete="off" aria-label="Search Marvel products">
+      <button type="button" class="search-clear" data-search-clear aria-label="Clear search">✕</button>
+    </div>
+    <div class="search-dropdown" data-search-dropdown></div>
+  </div>
+  <a href="../index.html#landing" class="mobile-link">Home</a>
+  <a href="../index.html#heroes" class="mobile-link">Heroes</a>
+  <a href="../index.html#collections" class="mobile-link">Collections</a>
+  <a href="../index.html#footer" class="mobile-link">Contact</a>
+  <div class="nav-icon-row">
+    <a href="wishlist.html" class="nav-icon-link" aria-label="Wishlist">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+      <span class="nav-icon-badge" data-wishlist-count>0</span>
+    </a>
+    <a href="cart.html" class="nav-icon-link" aria-label="Cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+      <span class="nav-icon-badge" data-cart-count>0</span>
+    </a>
+  </div>
+    <button class="theme-toggle" id="themeToggleMobile" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.5 12h2.6M18.9 12h2.6M4.2 19.8 6.1 17.9M17.9 6.1l1.9-1.9"/></svg>
+      </button>
+  <div id="mobileAuthSlot"><!-- Login link OR "Hi, Username" + Logout, rendered by js/auth.js --></div>
+</div>
+
+<section class="product-hero" style="background: radial-gradient(ellipse at 20% 20%, #8b5cf622, transparent 55%), #0a0a0d;">
+  <a href="../index.html#heroes" class="back-link">← Back to Heroes</a>
+  <h1 class="product-hero-title" style="color:#8b5cf6;">Hawkeye</h1>
+  <p class="product-hero-sub">Jackets · Never Miss</p>
+</section>
+
+<div class="product-grid" data-hero="hawkeye" data-category="Jackets"></div>
+
+<footer class="footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">MARVEL FASHION</span>
+      <p class="footer-tag">Wear The Legend Within</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Heroes</h4>
+        <a href="../index.html#heroes">Spider-Man</a>
+        <a href="../index.html#heroes">Thor</a>
+        <a href="../index.html#heroes">Iron Man</a>
+        <a href="../index.html#heroes">Captain America</a>
+        <a href="../index.html#heroes">Black Panther</a>
+        <a href="../index.html#heroes">Hulk</a>
+        <a href="../index.html#heroes">Black Widow</a>
+        <a href="../index.html#heroes">Hawkeye</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-social" aria-label="Social media links">
+      <a href="#" class="social-icon" aria-label="Instagram">◎</a>
+      <a href="#" class="social-icon" aria-label="Twitter">✕</a>
+      <a href="#" class="social-icon" aria-label="TikTok">♪</a>
+    </div>
+  </div>
+  <p class="footer-copyright">© 2026 MARVEL FASHION Fashion. All rights reserved. All characters are original and fictional.</p>
+</footer>
+
+<script src="../js/products.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/api/apiClient.js"></script>
+<!-- MFPRODSVC_INJECTED: cart.js/wishlist.js/checkout.js need MarvelProductService for real (MySQL) product data -->
+<script src="../js/api/productApi.js"></script>
+<script src="../js/api/productService.js"></script>
+<script src="../js/wishlist.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/product.js"></script>
+<script src="../js/api/productApi.js"></script>
+<script src="../js/api/productService.js"></script>
+<script src="../js/renderer/productRenderer.js"></script>
+<script src="../js/pageProducts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../js/three-bg.js"></script>
+<script src="../js/aurora.js"></script>
+<script src="../js/liquid-bg.js"></script>
+<script src="../js/fx.js"></script>
+<script src="../js/theme.js"></script>
+
+<!-- MARVEL FASHION AI Chat Assistant (added by js/chatbot.js) -->
+<div id="mfChatbot"></div>
+<script src="../js/chatbot-config.js"></script>
+<script src="../js/chatbot.js"></script>
+</body>
+</html>
