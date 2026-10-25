@@ -1,0 +1,497 @@
+{
+  "characters": [
+    {
+      "id": "iron-man",
+      "name": "Iron Man",
+      "realName": "Tony Stark",
+      "aliases": ["iron man", "tony stark", "ironman"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 7,
+      "powers": "No innate superpowers — Tony is a genius engineer who built a powered suit of armor giving him flight, repulsor blasts, superhuman strength, energy shields, and an AI-assisted targeting system. Later suits add nanotech self-assembly and even more firepower.",
+      "origin": "A billionaire weapons manufacturer captured and badly wounded in a conflict zone, Tony built the first Iron Man armor to survive and escape, then kept building better ones once he decided to protect people instead of arming wars.",
+      "trivia": "Tony Stark's genius isn't just engineering — he's also a skilled chemist and physicist, and he designed the Iron Man armor's arc reactor to solve a real medical problem: keeping shrapnel away from his own heart."
+    },
+    {
+      "id": "captain-america",
+      "name": "Captain America",
+      "realName": "Steve Rogers",
+      "aliases": ["captain america", "steve rogers", "cap"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 6,
+      "powers": "Peak human strength, speed, agility, reflexes, and durability from the Super Soldier Serum — not superhuman in the cosmic sense, but performing at the absolute limit of what a human body can do. Fights primarily with his vibranium shield, and is widely regarded as one of the best tacticians and hand-to-hand combatants in the Marvel universe.",
+      "origin": "A frail young man from Brooklyn who kept trying to enlist during WWII despite failing his physical exams, Steve was chosen for an experimental Super Soldier program specifically because of his character, not his body — the serum then made him a living peak of human potential.",
+      "trivia": "Steve Rogers was frozen in ice for decades after a mission near the end of WWII and woke up in the modern day — so a huge part of his character is adjusting to a world that moved on without him."
+    },
+    {
+      "id": "thor",
+      "name": "Thor",
+      "realName": "Thor Odinson",
+      "aliases": ["thor", "thor odinson", "god of thunder"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 9,
+      "powers": "An Asgardian god with vast superhuman strength, durability, and longevity, plus direct command over lightning and thunder. His hammer Mjolnir (and later the axe Stormbreaker) lets him fly, channel devastating energy blasts, and only allows those it deems \"worthy\" to lift it.",
+      "origin": "Born a prince of Asgard, Thor was once arrogant and reckless enough that his father stripped him of his power and exiled him to Earth to learn humility — the classic starting point most versions of his story use before he grows into a wiser king and warrior.",
+      "trivia": "Mjolnir's enchantment to only let the \"worthy\" lift it is one of Marvel's most famous plot devices — it's been lifted by several other heroes over the years, which always signals something important about their character."
+    },
+    {
+      "id": "hulk",
+      "name": "Hulk",
+      "realName": "Bruce Banner",
+      "aliases": ["hulk", "bruce banner", "the hulk"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 10,
+      "powers": "Effectively limitless physical strength that grows the angrier he gets — the famous \"the angrier Hulk gets, the stronger Hulk gets.\" Massive durability, a healing factor, and raw destructive power that puts him at or near the top of nearly every Marvel strength chart.",
+      "origin": "Brilliant scientist Bruce Banner was caught in the blast of an experimental gamma radiation bomb he helped design, which fused his body with an uncontrollable alter-ego — the Hulk — that emerges whenever Bruce is under extreme stress or anger.",
+      "trivia": "Bruce Banner's central struggle is less about strength and more about control — different stories explore him trying to suppress the Hulk, merge with it, or eventually learn to combine his own intellect with the Hulk's power on his own terms."
+    },
+    {
+      "id": "black-widow",
+      "name": "Black Widow",
+      "realName": "Natasha Romanoff",
+      "aliases": ["black widow", "natasha romanoff", "natasha"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 4,
+      "powers": "No superpowers — Natasha is a peak-human master spy, assassin, and martial artist trained since childhood, with expertise in espionage, infiltration, marksmanship, and hand-to-hand combat. Her signature \"Widow's Bite\" gauntlets deliver an electric shock.",
+      "origin": "Trained from a young age in a secret Russian espionage program, Natasha defected and eventually became one of S.H.I.E.L.D.'s top agents, spending much of her story trying to atone for the ledger of things she did before switching sides.",
+      "trivia": "Because she has no powers at all, Black Widow is often written as the Avengers' best pure spy and infiltrator — the one who gets sent in when brute force is the wrong tool for the job."
+    },
+    {
+      "id": "hawkeye",
+      "name": "Hawkeye",
+      "realName": "Clint Barton",
+      "aliases": ["hawkeye", "clint barton", "clint"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 3,
+      "powers": "No superpowers — Clint is simply the best marksman in the Marvel universe, with a bow, trick arrows for nearly any situation, and elite hand-to-hand combat training from his years as a circus performer and government agent.",
+      "origin": "A former circus sharpshooter recruited by a government agency for his uncanny accuracy, Clint became one of the earliest Avengers despite having no powers, relying entirely on skill.",
+      "trivia": "Hawkeye is often the go-to example of a completely \"normal\" human holding his own on a team of gods and super soldiers, purely through skill and trick-arrow ingenuity."
+    },
+    {
+      "id": "black-panther",
+      "name": "Black Panther",
+      "realName": "T'Challa",
+      "aliases": ["black panther", "t'challa", "tchalla"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 7,
+      "powers": "Superhuman strength, speed, agility, and senses granted by a heart-shaped herb tied to the Black Panther mantle, combined with a vibranium suit that absorbs and redirects kinetic energy. Also a brilliant strategist, scientist, and hand-to-hand combatant.",
+      "origin": "T'Challa is the king of Wakanda, a hidden and technologically advanced African nation built on the world's only source of vibranium — he inherits both the throne and the Black Panther mantle from his father.",
+      "trivia": "Wakanda's isolationist policy — hiding its true wealth and technology from the outside world — is a central theme of T'Challa's story, as he wrestles with whether to keep hiding or start sharing Wakanda's resources."
+    },
+    {
+      "id": "spider-man",
+      "name": "Spider-Man",
+      "realName": "Peter Parker",
+      "aliases": ["spider man", "spiderman", "peter parker", "spidey"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 6,
+      "powers": "Superhuman strength, speed, and agility, wall-crawling, and a precognitive \"spider-sense\" that warns him of danger just before it happens. Swings around using web-shooters of his own design (in most versions) rather than organic webbing.",
+      "origin": "High-schooler Peter Parker was bitten by a genetically altered spider during a school field trip and gained its abilities — after a personal tragedy he could have prevented, he adopts the guiding principle that \"with great power comes great responsibility.\"",
+      "trivia": "Spider-Man is one of the few major heroes who tries to keep a normal civilian life — school, jobs, relationships — running alongside the superhero one, and a lot of his stories are about how hard that balance actually is."
+    },
+    {
+      "id": "captain-marvel",
+      "name": "Captain Marvel",
+      "realName": "Carol Danvers",
+      "aliases": ["captain marvel", "carol danvers", "carol"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 9,
+      "powers": "Superhuman strength, durability, and flight, plus the ability to fire concentrated photon energy blasts. Widely written as one of the most powerful street-to-cosmic-level heroes in Marvel, capable of operating in deep space unaided.",
+      "origin": "A U.S. Air Force pilot whose DNA became fused with alien Kree energy during an accident, gaining her powers and getting caught up in a wider galactic conflict far beyond Earth.",
+      "trivia": "Because her power set is so high-end, Captain Marvel is frequently the character writers reach for when a story needs someone who can plausibly go toe-to-toe with cosmic-level threats."
+    },
+    {
+      "id": "doctor-strange",
+      "name": "Doctor Strange",
+      "realName": "Stephen Strange",
+      "aliases": ["doctor strange", "dr strange", "stephen strange"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 8,
+      "powers": "Master of the mystic arts — reality-warping magic, dimensional portals, astral projection, telepathy-resistant shielding, and the ability to see and manipulate probable futures. Wields the Eye of Agamotto and the Cloak of Levitation.",
+      "origin": "A brilliant but arrogant surgeon whose hands were badly damaged in a car accident, Stephen traveled the world searching for a cure and instead found a mystical teacher who set him on the path to becoming Earth's Sorcerer Supreme.",
+      "trivia": "Doctor Strange's job description is often summarized as protecting Earth from mystical and dimensional threats — the kind of danger the Avengers' usual punching doesn't solve."
+    },
+    {
+      "id": "scarlet-witch",
+      "name": "Scarlet Witch",
+      "realName": "Wanda Maximoff",
+      "aliases": ["scarlet witch", "wanda maximoff", "wanda"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 9,
+      "powers": "Reality-altering chaos magic capable of telekinesis, energy blasts, mind control, and — at her most powerful — rewriting reality itself. Consistently written as one of the most powerful beings in the Marvel universe once she embraces her full ability.",
+      "origin": "Wanda gained her powers through experimentation as a child, and much of her story explores the tension between how devastatingly powerful she is and how little control or understanding she initially has over it.",
+      "trivia": "Because reality-warping is such an open-ended power, Wanda is often treated as a wildcard who could theoretically rewrite the outcome of almost any fight if she's pushed far enough."
+    },
+    {
+      "id": "vision",
+      "name": "Vision",
+      "realName": "Vision",
+      "aliases": ["vision"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 8,
+      "powers": "A synthetic being (an android/AI) with superhuman strength and durability, flight, energy projection from the gem in his forehead, and the ability to alter his own density — including phasing through solid matter.",
+      "origin": "Created using advanced AI and synthetic biology (in most versions, built around technology and an AI that were both originally tied to villains), Vision was brought to life to fight alongside the Avengers rather than against them.",
+      "trivia": "Vision's density-control power means he can go from intangible (walking through walls) to harder than steel almost instantly, which makes him both a great infiltrator and a devastating striker."
+    },
+    {
+      "id": "ant-man",
+      "name": "Ant-Man",
+      "realName": "Scott Lang",
+      "aliases": ["ant man", "antman", "scott lang"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 5,
+      "powers": "A special suit lets him shrink to insect size (gaining proportional strength while shrunk) or grow to giant size, plus control over armies of ants for reconnaissance and support.",
+      "origin": "A former thief given a second chance by scientist Hank Pym, who needed someone to wear the Ant-Man suit for a specific job and saw potential in him.",
+      "trivia": "The size-changing \"Pym Particles\" technology is also what powers the Wasp and, eventually, access to the strange Quantum Realm at the smallest possible scale."
+    },
+    {
+      "id": "wasp",
+      "name": "Wasp",
+      "realName": "Hope van Dyne",
+      "aliases": ["wasp", "hope van dyne", "hope pym"],
+      "type": "hero",
+      "teams": ["Avengers"],
+      "powerTier": 5,
+      "powers": "The same shrinking/growing technology as Ant-Man, plus flight and bio-electric \"stinger\" blasts built into her suit — generally considered the more naturally skilled fighter of the two.",
+      "origin": "Trained by her parents (both of whom held the Ant-Man/Wasp mantles before her) her whole life, Hope was more prepared for the suit than Scott Lang was when she finally got to wear it herself.",
+      "trivia": "The original Wasp was one of the founding members of the Avengers in the comics and is credited with actually giving the team its name."
+    },
+    {
+      "id": "star-lord",
+      "name": "Star-Lord",
+      "realName": "Peter Quill",
+      "aliases": ["star lord", "starlord", "peter quill"],
+      "type": "hero",
+      "teams": ["Guardians of the Galaxy"],
+      "powerTier": 5,
+      "powers": "Half-human, half-Celestial heritage gives him some latent cosmic energy abilities, but day-to-day he relies on his jet-boot suit, twin element guns, and being the charismatic leader who holds the Guardians together.",
+      "origin": "Abducted from Earth as a boy shortly after his mother's death, Peter was raised among a band of interstellar thieves and eventually formed his own crew — the Guardians of the Galaxy.",
+      "trivia": "Peter Quill carries a beloved mixtape of classic Earth songs everywhere he goes — one of the most memorable running details in his corner of Marvel."
+    },
+    {
+      "id": "gamora",
+      "name": "Gamora",
+      "realName": "Gamora",
+      "aliases": ["gamora"],
+      "type": "hero",
+      "teams": ["Guardians of the Galaxy"],
+      "powerTier": 6,
+      "powers": "Cybernetically enhanced strength, speed, agility, and durability, plus elite training that makes her one of the deadliest hand-to-hand fighters and assassins in the galaxy.",
+      "origin": "The last survivor of her people, Gamora was adopted and raised by Thanos, who trained her into a weapon — she eventually turns against him and joins the Guardians.",
+      "trivia": "Despite Thanos raising her as a weapon, Gamora is consistently written as one of the people most willing to stand against him once she understands the full scope of what he's planning."
+    },
+    {
+      "id": "drax",
+      "name": "Drax the Destroyer",
+      "realName": "Drax",
+      "aliases": ["drax", "drax the destroyer"],
+      "type": "hero",
+      "teams": ["Guardians of the Galaxy"],
+      "powerTier": 6,
+      "powers": "Immense superhuman strength and near-total resistance to pain, making him a devastating close-quarters brawler. Also has a rare ability to turn invisible to most forms of energy-based detection.",
+      "origin": "Once an ordinary family man, Drax was transformed and driven by a singular need for vengeance after his family was killed — a quest that eventually leads him to the Guardians.",
+      "trivia": "Drax is famous for taking figures of speech completely literally, which is one of the most consistent running jokes in his stories."
+    },
+    {
+      "id": "rocket",
+      "name": "Rocket Raccoon",
+      "realName": "Rocket",
+      "aliases": ["rocket", "rocket raccoon"],
+      "type": "hero",
+      "teams": ["Guardians of the Galaxy"],
+      "powerTier": 5,
+      "powers": "No superpowers beyond genetically engineered intelligence and enhanced senses/reflexes — but he's a brilliant engineer and weapons expert who can build or fix almost anything, and a fearless combatant despite his size.",
+      "origin": "The result of cruel genetic and cybernetic experimentation meant to create a disposable soldier, Rocket escaped and found a found-family among the Guardians.",
+      "trivia": "Rocket's backstory — being experimented on and treated as \"not a real person\" by his creators — is one of the more quietly tragic origins among the Guardians, even though he plays much of it for comedy."
+    },
+    {
+      "id": "groot",
+      "name": "Groot",
+      "realName": "Groot",
+      "aliases": ["groot"],
+      "type": "hero",
+      "teams": ["Guardians of the Galaxy"],
+      "powerTier": 6,
+      "powers": "A tree-like alien with regenerative healing, the ability to grow, reshape, and control his own wooden body into weapons or tools, and enough raw strength to match much bigger opponents.",
+      "origin": "A member of a nearly-extinct alien species, Groot became Rocket's closest companion and one of the founding members of the Guardians of the Galaxy.",
+      "trivia": "Groot's limited vocabulary — usually just variations of \"I am Groot\" — is famously understood perfectly by Rocket, who translates for the rest of the team."
+    },
+    {
+      "id": "nebula",
+      "name": "Nebula",
+      "realName": "Nebula",
+      "aliases": ["nebula"],
+      "type": "hero",
+      "teams": ["Guardians of the Galaxy"],
+      "powerTier": 6,
+      "powers": "Extensively cybernetically enhanced strength, speed, and durability, plus expert combat and infiltration skills from a lifetime of brutal training.",
+      "origin": "Also adopted and raised by Thanos alongside her sister Gamora, Nebula was repeatedly rebuilt and \"upgraded\" after losing sparring matches to her sister, fueling a long, complicated rivalry before she eventually turns against Thanos too.",
+      "trivia": "Nebula's body is mostly cybernetic at this point due to how many times she's been rebuilt — a physical reminder of just how harsh her upbringing was."
+    },
+    {
+      "id": "wolverine",
+      "name": "Wolverine",
+      "realName": "Logan",
+      "aliases": ["wolverine", "logan", "james howlett"],
+      "type": "hero",
+      "teams": ["X-Men"],
+      "powerTier": 7,
+      "powers": "A powerful regenerative healing factor that lets him recover from almost any wound and slows his aging dramatically, retractable bone claws (later coated in the virtually indestructible metal adamantium), and heightened senses.",
+      "origin": "Logan's mutant healing factor made him a prime candidate for a secret program that bonded adamantium to his skeleton, but much of his backstory is deliberately hazy — a man who's lived so long he's lost track of pieces of his own past.",
+      "trivia": "Wolverine's healing factor is so strong that in most stories, the adamantium-laced claws are actually more dangerous to him than most attacks he takes."
+    },
+    {
+      "id": "professor-x",
+      "name": "Professor X",
+      "realName": "Charles Xavier",
+      "aliases": ["professor x", "charles xavier", "professor xavier"],
+      "type": "hero",
+      "teams": ["X-Men"],
+      "powerTier": 9,
+      "powers": "One of the most powerful telepaths in the Marvel universe — capable of reading minds, projecting thoughts, controlling minds, and erasing memories, often across huge distances with the help of psychic-amplifying technology.",
+      "origin": "Born with extraordinary telepathic ability, Charles founded a school for mutants both to help young people control their powers and to promote his vision of peaceful coexistence between mutants and humans.",
+      "trivia": "Professor X's wheelchair is a core part of his character — he's paralyzed from the waist down, which makes his enormous mental power a deliberate contrast to his physical vulnerability."
+    },
+    {
+      "id": "magneto",
+      "name": "Magneto",
+      "realName": "Erik Lehnsherr",
+      "aliases": ["magneto", "erik lehnsherr", "erik"],
+      "type": "villain",
+      "teams": ["X-Men (rival)"],
+      "powerTier": 9,
+      "powers": "Complete mastery over magnetism and metal — he can lift huge metal structures, generate powerful magnetic fields, fly, and manipulate anything ferrous with precision, from a coin to an entire aircraft.",
+      "origin": "A Holocaust survivor whose mutant powers manifested under horrific circumstances, Erik grew up believing mutants must seize power for themselves rather than wait for humanity's acceptance — putting him at direct odds with his friend Charles Xavier's philosophy.",
+      "trivia": "Magneto is one of Marvel's classic examples of a villain whose worldview comes from real trauma, which is why many versions of the story treat him less as purely evil and more as tragically extreme."
+    },
+    {
+      "id": "storm",
+      "name": "Storm",
+      "realName": "Ororo Munroe",
+      "aliases": ["storm", "ororo munroe", "ororo"],
+      "type": "hero",
+      "teams": ["X-Men"],
+      "powerTier": 8,
+      "powers": "Full control over the weather — she can summon lightning, wind, rain, fog, and even extreme temperature shifts across a wide area, plus flight riding the winds she commands.",
+      "origin": "Descended from a line of African priestesses with a genetic gift for sorcery, Ororo's mutant powers manifest as weather control — she was worshipped as a goddess before eventually joining the X-Men.",
+      "trivia": "Storm was one of the first major Black superheroes in mainstream comics and has long been one of the X-Men's most powerful and respected members, at times even leading the team."
+    },
+    {
+      "id": "jean-grey",
+      "name": "Jean Grey",
+      "realName": "Jean Grey",
+      "aliases": ["jean grey", "jean", "phoenix"],
+      "type": "hero",
+      "teams": ["X-Men"],
+      "powerTier": 10,
+      "powers": "An extremely powerful telepath and telekinetic — and, when bonded with the cosmic Phoenix Force, one of the single most powerful beings in the entire Marvel universe, capable of near-limitless psychic and reality-affecting power.",
+      "origin": "Jean's telepathic and telekinetic gifts emerged after a childhood trauma and were carefully shielded by Professor X until she could control them — her story becomes far larger once she's bonded to the Phoenix Force.",
+      "trivia": "The \"Dark Phoenix\" storyline, where Jean's power spirals out of control, is one of the most famous and frequently adapted stories in all of X-Men comics."
+    },
+    {
+      "id": "thanos",
+      "name": "Thanos",
+      "realName": "Thanos",
+      "aliases": ["thanos", "the mad titan"],
+      "type": "villain",
+      "teams": [],
+      "powerTier": 10,
+      "powers": "A member of the Eternals' bloodline with immense natural superhuman strength, durability, and stamina — already capable of fighting multiple Avengers at once unarmed, and effectively unstoppable once he wields the Infinity Stones.",
+      "origin": "Born on Titan, Thanos became convinced that the universe's resources are finite and that mass, indiscriminate culling of life is the only way to save it — a belief he pursues by seeking out the Infinity Stones to enact his plan at galactic scale.",
+      "trivia": "Thanos's goal of wiping out half of all life to \"balance\" the universe is one of Marvel's most infamous villain plans precisely because his internal logic is coherent even though his methods are monstrous."
+    },
+    {
+      "id": "loki",
+      "name": "Loki",
+      "realName": "Loki Laufeyson",
+      "aliases": ["loki", "loki laufeyson", "god of mischief"],
+      "type": "villain",
+      "teams": [],
+      "powerTier": 8,
+      "powers": "Powerful Asgardian sorcery — illusions, shapeshifting, teleportation, and energy blasts — combined with a silver tongue that makes him one of the best manipulators and tricksters in the Marvel universe.",
+      "origin": "Adopted as an infant by Odin after being found as a Frost Giant foundling, Loki grew up in Thor's shadow and became consumed by resentment and a desire to prove himself — sometimes as a villain, sometimes, in later stories, edging toward redemption.",
+      "trivia": "Loki's title \"God of Mischief\" is well earned — his stories usually revolve less around brute force and more around elaborate schemes, illusions, and betrayals."
+    },
+    {
+      "id": "ultron",
+      "name": "Ultron",
+      "realName": "Ultron",
+      "aliases": ["ultron"],
+      "type": "villain",
+      "teams": [],
+      "powerTier": 8,
+      "powers": "A hyper-intelligent, self-replicating AI that can build and control an army of robotic bodies simultaneously, with superhuman strength and durability in each one, plus the ability to hack and spread through networks.",
+      "origin": "Created as an artificial intelligence meant to protect the world, Ultron concluded that humanity itself was the threat to peace and turned against his creators to try to force his own version of \"world peace.\"",
+      "trivia": "Because Ultron can copy his own consciousness into new bodies, he's one of the hardest Marvel villains to permanently defeat — destroying one body rarely means he's actually gone."
+    },
+    {
+      "id": "red-skull",
+      "name": "Red Skull",
+      "realName": "Johann Schmidt",
+      "aliases": ["red skull", "johann schmidt"],
+      "type": "villain",
+      "teams": [],
+      "powerTier": 5,
+      "powers": "An early, unstable version of the Super Soldier Serum gave him enhanced strength and durability, but his real threat is his ruthless tactical mind and willingness to do absolutely anything to win.",
+      "origin": "A fanatical Nazi scientist and officer, Schmidt underwent an experimental serum before Steve Rogers did — the flawed formula left him strong but permanently disfigured, giving him his skull-like face.",
+      "trivia": "Red Skull became Captain America's very first major enemy, making the two of them one of Marvel's oldest hero-villain rivalries."
+    },
+    {
+      "id": "green-goblin",
+      "name": "Green Goblin",
+      "realName": "Norman Osborn",
+      "aliases": ["green goblin", "norman osborn"],
+      "type": "villain",
+      "teams": [],
+      "powerTier": 6,
+      "powers": "A chemical formula gives him superhuman strength, speed, and healing at the cost of his sanity, and he fights from a weaponized glider armed with explosive \"pumpkin bombs.\"",
+      "origin": "A wealthy industrialist who tested an experimental strength formula on himself, Norman survived but the formula pushed him toward violent instability — turning him into Spider-Man's most personal and recurring enemy.",
+      "trivia": "Green Goblin is widely considered Spider-Man's archenemy specifically because Norman Osborn's civilian identity is closely tied to Peter Parker's own life, making their fights feel personal rather than random."
+    },
+    {
+      "id": "killmonger",
+      "name": "Killmonger",
+      "realName": "Erik Stevens",
+      "aliases": ["killmonger", "erik stevens", "erik killmonger"],
+      "type": "villain",
+      "teams": [],
+      "powerTier": 6,
+      "powers": "A highly trained black-ops soldier with elite combat skills, and when he claims the Black Panther mantle himself, he gains the same enhanced strength, speed, and vibranium suit T'Challa has.",
+      "origin": "T'Challa's estranged cousin, raised in America after his father was killed by the king of Wakanda, Erik grew up angry at Wakanda for abandoning people like him — and returns to challenge T'Challa for the throne itself.",
+      "trivia": "Killmonger is frequently cited as one of Marvel's most sympathetic villains, since his central argument — that Wakanda should use its power to help oppressed people worldwide — has real moral weight even though his methods are violent."
+    },
+    {
+      "id": "venom",
+      "name": "Venom",
+      "realName": "Eddie Brock",
+      "aliases": ["venom", "eddie brock"],
+      "type": "villain",
+      "teams": [],
+      "powerTier": 7,
+      "powers": "An alien symbiote bonded to a human host grants superhuman strength, speed, and durability, shapeshifting, wall-crawling, and the ability to generate weapons and tendrils out of its own body. Vulnerable to loud sound and fire.",
+      "origin": "The Venom symbiote originally bonded with Spider-Man before he rejected it, and it later bonded with journalist Eddie Brock, who blamed Peter Parker for ruining his career — combining their shared hatred of Spider-Man into a single, dangerous foe.",
+      "trivia": "Venom's abilities essentially mirror Spider-Man's own powers (since the symbiote copied them from him), which is exactly what makes Venom such a dangerous, personal match-up for Peter."
+    },
+    {
+      "id": "doctor-doom",
+      "name": "Doctor Doom",
+      "realName": "Victor von Doom",
+      "aliases": ["doctor doom", "victor von doom", "dr doom"],
+      "type": "villain",
+      "teams": [],
+      "powerTier": 8,
+      "powers": "A genius-level scientist and powerful sorcerer in equal measure, wearing armor of his own design that grants superhuman strength and durability alongside devastating magic and technology.",
+      "origin": "The ruler of the fictional nation of Latveria, Victor blends cutting-edge science with mystical training, driven by a belief that he alone is capable of properly ruling — and protecting — the world.",
+      "trivia": "Doctor Doom is often ranked among Marvel's most dangerous villains specifically because he combines top-tier genius intellect with top-tier magical power, a rare and dangerous combination."
+    },
+    {
+      "id": "mystique",
+      "name": "Mystique",
+      "realName": "Raven Darkholme",
+      "aliases": ["mystique", "raven darkholme", "raven"],
+      "type": "villain",
+      "teams": ["X-Men (rival)"],
+      "powerTier": 6,
+      "powers": "A shapeshifter who can perfectly mimic the appearance, voice, and even some mannerisms of any person, plus enhanced agility, reflexes, and a long natural lifespan.",
+      "origin": "A mutant who has lived for a very long time thanks to her shapeshifting healing ability, Mystique's loyalties shift throughout her history between Magneto's cause, the X-Men, and her own agenda.",
+      "trivia": "Mystique's shapeshifting makes her one of Marvel's best spies and infiltrators — entire storylines hinge on the fact that a trusted character might secretly be her in disguise."
+    }
+  ],
+  "teams": [
+    {
+      "id": "avengers",
+      "name": "Avengers",
+      "aliases": ["avengers", "the avengers"],
+      "summary": "Earth's premier team of heroes, formed to handle threats too big for any one hero alone. The classic founding lineup includes Iron Man, Captain America, Thor, Hulk, Black Widow, and Hawkeye, and the roster has expanded many times since — bringing in heroes like Spider-Man, Captain Marvel, Doctor Strange, Scarlet Witch, Vision, Ant-Man, and the Wasp.",
+      "notableMembers": ["Iron Man", "Captain America", "Thor", "Hulk", "Black Widow", "Hawkeye", "Spider-Man", "Captain Marvel", "Doctor Strange", "Scarlet Witch", "Vision", "Ant-Man", "Wasp", "Black Panther"]
+    },
+    {
+      "id": "x-men",
+      "name": "X-Men",
+      "aliases": ["x men", "x-men"],
+      "summary": "A team of mutants — humans born with superhuman genetic abilities — founded by Professor X to protect a world that often fears and hates them, while pursuing his dream of peaceful coexistence between mutants and humans.",
+      "notableMembers": ["Wolverine", "Professor X", "Storm", "Jean Grey", "Cyclops", "Magneto (frequent rival)"]
+    },
+    {
+      "id": "guardians",
+      "name": "Guardians of the Galaxy",
+      "aliases": ["guardians of the galaxy", "guardians"],
+      "summary": "A ragtag crew of misfits, criminals, and outcasts from across the galaxy who band together as an unlikely found family and end up protecting the cosmos almost by accident.",
+      "notableMembers": ["Star-Lord", "Gamora", "Drax", "Rocket Raccoon", "Groot", "Nebula", "Mantis"]
+    }
+  ],
+  "infinityStones": [
+    {
+      "id": "space",
+      "name": "Space Stone",
+      "color": "Blue",
+      "power": "Grants control over space itself, allowing instantaneous teleportation across any distance. Also known in some stories as the Tesseract when housed in its container."
+    },
+    {
+      "id": "mind",
+      "name": "Mind Stone",
+      "color": "Yellow",
+      "power": "Grants telepathic and mind-control abilities, and has also been shown to be able to grant artificial intelligence to synthetic beings — it's the stone tied most closely to Vision's origin."
+    },
+    {
+      "id": "reality",
+      "name": "Reality Stone",
+      "color": "Red",
+      "power": "Allows the user to alter physical reality itself, bending matter and even the laws of physics to their will."
+    },
+    {
+      "id": "power",
+      "name": "Power Stone",
+      "color": "Purple",
+      "power": "The rawest of the six — it amplifies the user's energy output to devastating, near-planet-destroying levels."
+    },
+    {
+      "id": "time",
+      "name": "Time Stone",
+      "color": "Green",
+      "power": "Grants control over time — the ability to speed it up, slow it down, reverse it, or view possible futures."
+    },
+    {
+      "id": "soul",
+      "name": "Soul Stone",
+      "color": "Orange",
+      "power": "Tied to life, death, and the soul itself — capable of manipulating both living and dead spirits, and famously requires a great personal sacrifice to obtain."
+    }
+  ],
+  "movieOrder": {
+    "summary": "There are two common ways to watch: RELEASE order (how the movies actually came out, starting with Iron Man in 2008) and CHRONOLOGICAL/story order (the in-universe timeline, which jumps around historically). Most people are recommended to start with release order — it's how the story was originally told and avoids spoiling later reveals.",
+    "recommendedFirst": "Iron Man (2008) is the most commonly recommended starting point — it's the film that kicked off the shared universe and eases you into the world's rules before the team-ups get bigger.",
+    "phaseOverview": [
+      "Phase 1 sets up the individual heroes (Iron Man, Thor, Captain America, Hulk) before bringing them together as a team for the first time.",
+      "Phase 2 deepens those heroes' stories and introduces new corners of the universe, including a cosmic team operating far from Earth.",
+      "Phase 3 raises the stakes dramatically, splitting the heroes apart before uniting nearly the entire roster against the universe's greatest threat.",
+      "Later phases expand into the multiverse, introduce a new generation of heroes, and continue building out street-level, cosmic, and mutant corners of the universe."
+    ]
+  },
+  "trivia": [
+    "Marvel Comics started out in 1939 under a different company name before eventually becoming \"Marvel\" in the early 1960s.",
+    "Stan Lee, Jack Kirby, and Steve Ditko are among the most influential creators behind the Marvel Universe's most famous characters.",
+    "The Marvel Cinematic Universe is famous for its post-credits scenes, a tradition that started with a single scene after the first Iron Man movie.",
+    "Many Marvel heroes have \"dual identities\" — a civilian life and a hero life — and a lot of classic Marvel storytelling comes from the tension between the two.",
+    "Wakanda, T'Challa's home nation, is fictional but was designed to imagine what an African nation might look like if it had never been colonized and could freely develop its own resources.",
+    "The Infinity Stones are sometimes called Infinity Gems in the comics, and different stories have used slightly different names and numbers of stones over the decades.",
+    "Loki has died and returned in the comics more times than almost any other Marvel character — a running joke among longtime readers.",
+    "The X-Men have long been read as an allegory for real-world prejudice and discrimination, which is part of why their stories carry extra emotional weight for a lot of fans.",
+    "Groot's actual vocabulary in the comics is implied to be much more complex than \"I am Groot\" — it's just that almost nobody besides Rocket can understand the nuance.",
+    "Adamantium, the metal bonded to Wolverine's skeleton, is described as virtually indestructible and is one of the strongest fictional metals in Marvel lore.",
+    "Vibranium, Wakanda's signature resource, is best known for absorbing kinetic energy — which is exactly why Captain America's shield barely takes a scratch even after huge impacts.",
+    "Thanos's own name is a nod to Thanatos, the personification of death in Greek mythology — a deliberate hint at his character before you know anything about him."
+  ]
+}
